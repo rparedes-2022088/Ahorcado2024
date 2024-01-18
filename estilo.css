@@ -1,7 +1,8 @@
-body{
+body {
     background-color: #B1BD96;
-};
+}
 
-#titulo{
-    align-items: center;
-};
+button {
+    background-color: #71CEF0;
+    margin: 3px;
+}

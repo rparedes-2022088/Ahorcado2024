@@ -1,7 +1,9 @@
 let abecedarioMin = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-let abecedarioMay = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","o","P","Q","R","S","T","U","V","W","X","Y","Z"];
+let abecedarioMay = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 let divDeBotones = document.getElementById("divBotones");
+let divDeBotones2 = document.getElementById("divBotonesMay");
+let divDeVidas = document.getElementById("divVidas");
 
 const fragmentoBotones = document.createDocumentFragment();
 
@@ -12,7 +14,7 @@ for(let letra of abecedarioMin){
     botonNuevo.textContent = letra;
     botonNuevo.value = letra;
     botonNuevo.id = "boton" + letra;
-    //botonNuevo.addEventListener("click",botonLetra);
+    botonNuevo.addEventListener("click",botonLetra);
     fragmentoBotones.appendChild(botonNuevo);
 };
 divDeBotones.appendChild(fragmentoBotones);
@@ -22,8 +24,12 @@ for(let letra of abecedarioMay){
     botonNuevo2.textContent = letra;
     botonNuevo2.value = letra;
     botonNuevo2.id = "boton" + letra;
-    //botonNuevo.addEventListener("click",botonLetra);
+    botonNuevo2.addEventListener("click",botonLetra);
     fragmentoBotones.appendChild(botonNuevo2);
 };
-divDeBotones.appendChild(botonNuevo2);
+
+function botonLetra(event){
+    alert("Letra presionada " + event.target.value);
+};
+divDeBotones2.appendChild(fragmentoBotones);
 
